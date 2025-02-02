@@ -4,7 +4,7 @@ import json
 
 from data_selects.find import find_in_documents
 
-BUFFER_SIZE = 2048
+BUFFER_SIZE = 1024
 
 
 def echo_server(host: str, port: int) -> None:

@@ -15,7 +15,7 @@ HTTP_PORT = 3000
 HTTP_HOST = "0.0.0.0"
 SOCKET_PORT = 5000
 SOCKET_HOST = "localhost"
-BUFFER_SIZE = 5000
+BUFFER_SIZE = 4096
 
 
 class HttpHandler(BaseHTTPRequestHandler):
