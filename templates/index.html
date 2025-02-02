@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quotes Search</title>
+    <link rel="stylesheet" href="/statics/styles.css">
+    <link rel="icon" href="/statics/images/favicon.png" type="image/png">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="/statics/images/logo.webp" alt="Quotes Search Logo" class="logo">
+        </div>
+        <h1>Quotes Search</h1>
+    </header>
+    <div class="container">
+        <div class="search-container">
+            <!-- Выпадающий список для выбора базы данных -->
+            <select id="databaseSelector">
+                <option value="quote">Quote</option>
+                <option value="author">Author</option>
+            </select>
+            <input type="text" id="searchInput" placeholder="Enter name or tag...">
+            <button id="searchButton">Search</button>
+        </div>
+        <!-- Всплывающие подсказки -->
+        <div id="searchTips" class="tips">
+            <p>Available search criteria:</p>
+            <ul id="tipsList"></ul>
+        </div>
+        <div id="results"></div>
+    </div>
+    <script src="/statics/script.js"></script>
+</body>
+</html>
