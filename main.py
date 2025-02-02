@@ -92,25 +92,6 @@ def up_http(host, port):
         logging.error(f"error while serving: {e}")
 
 
-# def up_socket(host: str, port: int) -> None:
-#     address = (host, port)
-#     sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-#     sock.bind(address)
-#     logging.info(f"Socket server started at {address}")
-#     try:
-#         while True:
-#             msg, addr = sock.recvfrom(BUFFER_SIZE)
-#             logging.info(f"Received message from {addr}: {msg.decode()}")
-#             response = f"Ответ на ваш запрос: {msg.decode()}"
-#             sock.sendto(response.encode(), addr)
-#             logging.info(f"Sent response to {addr}: {response}")
-#
-#     except KeyboardInterrupt as e:
-#         logging.error(f"error while serving: {e}")
-#     finally:
-#         sock.close()
-
-
 if __name__ == "__main__":
     logging.basicConfig(level=logging.DEBUG, format="%(threadName)s %(message)s")
 
