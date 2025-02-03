@@ -34,7 +34,7 @@ def find_in_documents(col: str, obj: str):
                     {key: {"$regex": value, "$options": "i"}}
                     if key in ["author", "tag"]
                     else {"$or": [{key: {"$regex": value[0], "$options": "i"}},
-                                  {{key: {"$regex": value[1]}, "$options": "i"}}]}
+                                  {key: {"$regex": value[1]}, "$options": "i"}]}
                 )
             case "name" | "description":
                 fetched_data = db[col].find({key: {"$regex": value, "$options": "i"}})
