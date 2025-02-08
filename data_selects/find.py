@@ -2,7 +2,7 @@ import logging
 import redis
 import json
 
-from conf.quotes_database import client, connect
+from conf.database import client, connect
 from redis_lru import RedisLRU
 from pymongo import errors
 
@@ -21,20 +21,24 @@ def find_in_documents(col: str, obj: str):
     and send to formatting"""
 
     try:
-        list_data = obj.split(" ")
-        dict_data = {list_data[0]: list_data[1]}
+        list_data = obj.split()
+        dict_data = {list_data[0]: list_data[1] if len(list_data) == 2 else list_data[1:]}
         object_key = list(dict_data.keys())[0]
         value = dict_data[object_key]
         key = quote_constructor[object_key] if object_key in quote_constructor \
             else author_constructor[object_key]
         fetched_data = None
+        if object_key == "tags" and len(value) != 2:
+            logging.error("Invalid tags format 2 tags needed")
+            return b"for 'tags' command needed 2 values"
+
+
         match key:
             case "author" | "tag" | "tags":
                 fetched_data = db[col].find(
                     {key: {"$regex": value, "$options": "i"}}
-                    if key in ["author", "tag"]
-                    else {"$or": [{key: {"$regex": value[0], "$options": "i"}},
-                                  {key: {"$regex": value[1]}, "$options": "i"}]}
+                    if object_key in ["author", "tag"]
+                    else {"$or": [{key: {"$regex": tag, "$options": "i"}} for tag in value]}
                 )
             case "name" | "description":
                 fetched_data = db[col].find({key: {"$regex": value, "$options": "i"}})
