@@ -2,7 +2,7 @@ import json
 import pika
 import logging
 
-from newsletter.conf.database import client, connect
+from conf.newsletter_database import connect, client
 from newsletter.models import Newsletter, UserContact
 
 logging.basicConfig(level=logging.INFO)
@@ -10,7 +10,6 @@ logging.basicConfig(level=logging.INFO)
 credentials = pika.PlainCredentials("guest", "guest")
 params = pika.ConnectionParameters(host="localhost", port=5672, credentials=credentials)
 connection = pika.BlockingConnection(params)
-
 
 channel = connection.channel()
 channel.queue_declare(queue="email_queue", durable=True)

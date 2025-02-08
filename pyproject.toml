@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "py-engineering-hw8"
+name = "hw8_http_version"
 version = "0.1.0"
 description = ""
 authors = ["Abboth <Alexmikhailov90@gmail.com>"]
@@ -13,6 +13,7 @@ redis = "^5.2.1"
 redis-lru = "^0.1.2"
 pika = "^1.3.2"
 faker = "^35.2.0"
+aio-pika = "^9.5.4"
 
 
 [build-system]

@@ -3,6 +3,8 @@ from urllib.parse import urlparse
 import mimetypes
 import logging
 import socket
+
+from data_processing import get_data_from_json
 from proxy_server import echo_server
 
 from http.server import HTTPServer, BaseHTTPRequestHandler
@@ -95,7 +97,13 @@ def up_http(host, port):
 if __name__ == "__main__":
     logging.basicConfig(level=logging.DEBUG, format="%(threadName)s %(message)s")
 
+    authors = Path("data_to_database/authors.json")
+    quotes = Path("data_to_database/quotes.json")
+    get_data_from_json(authors)
+    get_data_from_json(quotes)
+
     th_socket = Thread(target=echo_server, args=(SOCKET_HOST, SOCKET_PORT))
     th_http = Thread(target=up_http, args=(HTTP_HOST, HTTP_PORT))
     th_socket.start()
     th_http.start()
+

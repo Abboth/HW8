@@ -5,32 +5,53 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fdfcd647-3ace-40d7-b19f-ab1842ba03d7" name="Changes" comment="newsletter finishing&#10;quotes remodeled to HTTP version">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/database.py" beforeDir="false" afterPath="$PROJECT_DIR$/conf/newsletter_database.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_processing.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_processing.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_selects/find.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_selects/find.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_to_database/authors.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_to_database/quotes.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/find.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/proxy_server.py" beforeDir="false" afterPath="$PROJECT_DIR$/proxy_server.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/newsletter/conf/database.py" beforeDir="false" afterPath="$PROJECT_DIR$/conf/quotes_database.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/newsletter/consumer_email.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/newsletter/consumer_sms.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/newsletter/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/newsletter/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/newsletter/producer.py" beforeDir="false" afterPath="$PROJECT_DIR$/newsletter/producer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/newsletter/seeds.py" beforeDir="false" afterPath="$PROJECT_DIR$/newsletter/seeds.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/poetry.lock" beforeDir="false" afterPath="$PROJECT_DIR$/poetry.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "Abboth"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Abboth&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Abboth/HW8.git",
-    "accountId": "00d1d1b7-22b6-4b75-b921-9c29a39b3079"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Abboth/HW8.git&quot;,
+    &quot;accountId&quot;: &quot;00d1d1b7-22b6-4b75-b921-9c29a39b3079&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 1
-}]]></component>
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
   <component name="ProjectId" id="2sUNkG30e99D6jSWlIgZ4nXMZK5" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -39,11 +60,24 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Python.consumer.executor": "Run",
+    "Python.consumer_email.executor": "Run",
+    "Python.consumer_sms.executor": "Run",
     "Python.main.executor": "Run",
+    "Python.producer.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master"
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/alexm/PycharmProjects/hw8_http_version/conf"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\alexm\PycharmProjects\hw8_http_version\conf" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\alexm\PycharmProjects\hw8_http_version\newsletter\conf" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -76,7 +110,23 @@
       <option name="project" value="LOCAL" />
       <updated>1738506869464</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="newsletter finishing&#10;quotes remodeled to HTTP version">
+      <option name="closed" value="true" />
+      <created>1738507135725</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1738507135725</updated>
+    </task>
+    <task id="LOCAL-00004" summary="newsletter finishing&#10;quotes remodeled to HTTP version">
+      <option name="closed" value="true" />
+      <created>1738583620551</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1738583620551</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">

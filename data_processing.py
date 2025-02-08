@@ -1,7 +1,7 @@
 import logging
 import json
 
-from conf.database import client, connect
+from conf.quotes_database import client, connect
 from models.models import Author, Quote
 from pymongo import errors
 from pathlib import Path
@@ -68,9 +68,3 @@ def insert_data_to_mongo(collection_name: str, data: dict) -> None:
     except errors.PyMongoError as err:
         logging.error(f"Error with inserting data to Mongo, {err}")
 
-
-if __name__ == "__main__":
-    authors = Path("data_to_database/authors.json")
-    quotes = Path("data_to_database/quotes.json")
-    get_data_from_json(authors)
-    get_data_from_json(quotes)

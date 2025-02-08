@@ -2,7 +2,7 @@ import logging
 import redis
 import json
 
-from conf.database import client, connect
+from conf.quotes_database import client, connect
 from redis_lru import RedisLRU
 from pymongo import errors
 

@@ -2,7 +2,7 @@ import pika
 import logging
 import json
 
-from newsletter.conf.database import client, connect
+from conf.newsletter_database import connect, client
 from newsletter.models import User, UserContact
 from newsletter.seeds import insert_users
 
